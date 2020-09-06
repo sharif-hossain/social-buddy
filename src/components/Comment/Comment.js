@@ -35,10 +35,9 @@ const useStyles = makeStyles({
 const Comment = () => {
    const [postInfo,setPostInfo] = useState({});
    const [comments, setComments] = useState([])
-   const [images,setImages] = useState([]) 
-//    const [images,setImages] = useState([])
+
    const {postId} = useParams()
-   const {id} = useParams()
+
 
    useEffect(()=>{
        const url = `https://jsonplaceholder.typicode.com/posts/${postId}`
@@ -55,14 +54,14 @@ useEffect(()=>{
 },[])
 
 
-useEffect(()=>{
+// useEffect(()=>{
         
-    const url = `https://jsonplaceholder.typicode.com/photos/${id}`
-    fetch(url)
-    .then(res => res.json())
-    .then(data =>setImages(data));
+//     const url = 'https://jsonplaceholder.typicode.com/photos'
+//     fetch(url)
+//     .then(res => res.json())
+//     .then(data =>setImages(data));
 
-},[])
+// },[])
 // useEffect(()=>{
 //     const url = 'https://jsonplaceholder.typicode.com/photos'
 //  fetch(url)
@@ -100,8 +99,9 @@ const classes = useStyles();
             </div>
             <div>
             {
-                comments.map(comment =><CommentInfo comment={comment}></CommentInfo> )
+                comments.map(comment =><CommentInfo comment={comment} ></CommentInfo> )
             }
+            
             </div>
             
         </div>
