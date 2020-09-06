@@ -1,0 +1,13 @@
+.comment-section{
+    display: flex;
+}
+.comment-img{
+    /* margin: 5px; */
+    margin-top:30px;
+    margin-left: 10px;
+    
+}
+
+.comment-img img{
+    border-radius: 50%;
+}
