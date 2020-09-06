@@ -4,25 +4,26 @@ import './CommentInfo.css'
 const CommentInfo = (props) => {
     console.log(props)
     const {name,email,body} = props.comment;
-    // const {title,url} = props.image;
+
     const [images,setImages] = useState([])
 
-  
+    // load data for profile picture
 
     useEffect(()=>{
         
-            const url = 'https://jsonplaceholder.typicode.com/photos/'
+            const url = 'https://jsonplaceholder.typicode.com/photos?albumId=2';
             fetch(url)
             .then(res => res.json())
             .then(data =>setImages(data));
         
     },[])
     
- const image5 = images.slice(1,2);
+  const image5 = images.slice(4,5);
+
     const commentStyle = {border: '2px solid salmon',borderRadius:'10px',margin: '20px', padding: '10px'}
     return (   
         <div className="comment-section">
-            <img src={images.thumbnail} alt=""/>
+            {/* <img src={images.thumbnail} alt=""/> */}
             <div className="comment-img"> 
             {
                 image5.map(image => <img src={image.thumbnailUrl} alt=""/>)

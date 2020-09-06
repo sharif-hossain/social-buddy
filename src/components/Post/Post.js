@@ -4,7 +4,7 @@ import PostInfo from '../PostInfo/PostInfo';
 
 const Post = () => {
     const [posts,setPosts] = useState([]);
-
+   //load post data from api
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())

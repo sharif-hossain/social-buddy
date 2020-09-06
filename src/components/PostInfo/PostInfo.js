@@ -36,26 +36,26 @@ const PostInfo = (props) => {
         
         <div className="card">
             <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          {id}
-        </Typography>
-        <Typography variant="h5" component="h2">
-          {title}
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          
-        </Typography>
-        <Typography variant="body2" component="p">
-          {body}
-          <br />
-          
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Link to = {"/comment/"+id}><Button onClick={()=>handleComment(props.post)}  size="medium">See More</Button></Link>
-      </CardActions>
-    </Card>
+              <CardContent>
+                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                  {id}
+                </Typography>
+                <Typography variant="h5" component="h2">
+                  {title}
+                </Typography>
+                <Typography className={classes.pos} color="textSecondary">
+                  
+                </Typography>
+                <Typography variant="body2" component="p">
+                  {body}
+                  <br />
+                  
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Link to = {"/comment/"+id}><Button onClick={()=>handleComment(props.post)}  size="medium">See More</Button></Link>
+              </CardActions>
+            </Card>
     
         </div>
     );

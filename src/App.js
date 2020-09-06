@@ -11,11 +11,8 @@ import {
 import Comment from './components/Comment/Comment';
 import NotMatch from './components/NotMatch/NotMatch';
 
-
-
 function App() {
   
- 
   return (
        <div>
          <Header></Header>
