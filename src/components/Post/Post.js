@@ -11,12 +11,11 @@ const Post = () => {
         .then(data =>setPosts(data));
     },[])
 
-    const handleComment = (post)=>{console.log('button clicked',post) }
     return (
         <div className="content">
             <h2>Total Post : {posts.length}</h2>
             {
-                posts.map(post => <PostInfo handleComment={handleComment} post={post}></PostInfo>)
+                posts.map(post => <PostInfo post={post}></PostInfo>)
             }
         </div>
     );

@@ -53,7 +53,7 @@ const PostInfo = (props) => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link to = {"/comment/"+id}><Button onClick={()=>handleComment(props.post)}  size="medium">See More</Button></Link>
+                <Link to = {`/comment/${id}`}><Button size="medium">See More</Button></Link>
               </CardActions>
             </Card>
     
